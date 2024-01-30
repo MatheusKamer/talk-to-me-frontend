@@ -7,5 +7,6 @@ export { default as Next } from "./Next";
 export { default as NoCamera } from "./NoCamera";
 export { default as NoMicrofone } from "./NoMicrofone";
 export { default as NoScreen } from "./NoScreen";
+export { default as SendMessage } from "./SendMessage";
 export { default as Tela } from "./Tela";
 export { default as Vercel } from "./Vercel";
