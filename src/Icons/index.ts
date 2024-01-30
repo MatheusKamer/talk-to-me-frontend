@@ -4,5 +4,8 @@ export { default as LogoHeroAcademy } from "./LogoHeroAcademy";
 export { default as Logo } from "./Logo";
 export { default as Microfone } from "./Microfone";
 export { default as Next } from "./Next";
+export { default as NoCamera } from "./NoCamera";
+export { default as NoMicrofone } from "./NoMicrofone";
+export { default as NoScreen } from "./NoScreen";
 export { default as Tela } from "./Tela";
 export { default as Vercel } from "./Vercel";
