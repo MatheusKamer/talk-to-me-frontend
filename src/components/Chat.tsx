@@ -33,7 +33,12 @@ export default function Chat({ roomId }: { roomId: string }) {
       };
 
       socket?.emit('chat', sendMessageToServer);
-      setChat((prevState) => [...prevState, sendMessageToServer]);
+      setChat((prevState) =>
+        [
+          ...prevState,
+          sendMessageToServer
+        ]
+      );
 
       currentMessage.current!.value = '';
     }
