@@ -5,7 +5,7 @@ interface IButton {
 
 export default function Button({ title, type }: IButton) {
   return (
-    <button className="bg-ciano-100 w-full rounded-md px-3 py-2 text-black font-medium" type={type}>
+    <button className="bg-ciano-100 w-full rounded-md px-3 py-2 text-black font-medium mt-8" type={type}>
       <span>{title}</span>
     </button>
   )

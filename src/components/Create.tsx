@@ -1,15 +1,37 @@
-import { useRef } from 'react';
+import { FormEvent, useRef } from 'react';
 import Button from './Button';
 import { Input } from './Input';
+import { useRouter } from 'next/navigation';
 
 export default function CreateRoom() {
   const name = useRef<HTMLInputElement>(null);
+  const router = useRouter()
+
+  const handleCreateRoom = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if(name.current && name.current?.value !== ''){
+      sessionStorage.setItem('username', name.current.value)
+
+      const roomId = generateRandomString();
+
+      router.push(`/room/${roomId}`)
+    }
+  }
+
+  function generateRandomString() {
+    const randomString = Math.random().toString(36).substring(2, 7)
+
+    return randomString
+  }
 
   return (
     <>
-      <Input placeholder="Seu nome" type="text" ref={name} />
+      <form onSubmit={(e) => handleCreateRoom(e)}>
+        <Input placeholder="Seu nome" type="text" ref={name} />
 
-      <Button title="Entrar" type="button" />
+        <Button title="Entrar" type="submit" />
+      </form>
     </>
   );
 }
