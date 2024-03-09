@@ -27,7 +27,7 @@ export default function CreateRoom() {
 
   return (
     <>
-      <form onSubmit={(e) => handleCreateRoom(e)}>
+      <form onSubmit={(e) => handleCreateRoom(e)} className='space-y-8'>
         <Input placeholder="Seu nome" type="text" ref={name} />
 
         <Button title="Entrar" type="submit" />
