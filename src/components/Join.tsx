@@ -15,7 +15,7 @@ export default function JoinRoom() {
       sessionStorage.setItem('username', name.current.value)
       const roomId = id.current.value;
 
-      router.push(`/room/${roomId}`)
+      window.location.href = `/room/${roomId}`
     }
   }
   return (
